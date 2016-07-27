@@ -1,0 +1,26 @@
+{
+  "name": "weatherApp",
+  "authors": [
+    "Sarath S Nair <sarath.nair@asda.co.uk>"
+  ],
+  "description": "App to know weather in cities",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.2.0",
+    "angular": "^1.5.8",
+    "jquery": "^3.1.0",
+    "domReady": "requirejs-domready#^2.0.1",
+    "typeahead.js": "^0.11.1",
+    "angular-resource": "^1.5.8",
+    "angular-bootstrap": "^2.0.0"
+  }
+}
