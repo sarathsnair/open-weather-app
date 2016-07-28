@@ -2,14 +2,34 @@
 <html lang="en">
 
 <head>
-    <title>My APPLICATION</title>
+    <title>Weather Application</title>
     <meta charset="UTF-8">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app/lib/bootstrap/dist/css/bootstrap.min.css">
     <script src="app/lib/requirejs/require.js" data-main="app/config"></script>
 </head>
 
 <body>
-    <h1>Hai</h1>
+    <div ng-controller="weatherController as weather" class="container-fluid">
+        <div class="navbar">
+            <div class="col-md-4">
+                <h3>{{weather.pageTitle}}</h3>
+            </div>
+            <div class="col-md-5 search-input">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="{{weather.searchPlaceHolder}}" ng-model="weather.searchTerm">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button">Search</button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </div>
+        </div>
+        <hr>
+        <h4>{{weather.searchTerm}}</h4>
+        <footer>
+        </footer>
+    </div>
 </body>
 
 </html>

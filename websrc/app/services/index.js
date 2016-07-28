@@ -1,6 +1,8 @@
 define('services/index', [
-    'angular'
-], function (angular) {
+    'angular',
+    'services/weatherService'
+], function (angular,weatherServices) {
     var services = angular.module('services',[]);
+    services.service('weatherService',weatherServices);
     return services;
 });
