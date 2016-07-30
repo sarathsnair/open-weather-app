@@ -5,13 +5,15 @@ define('app', [
     'controllers/index',
     'services/index',
     'directives/index',
-    'utility/index'
+    'utility/index',
+    'angularLoadingBar'
 ], function (angular) {
     return angular.module('weather-app', [
         'ngResource',
         'ui.bootstrap',
         'controllers',
         'directives',
-        'services'
+        'services',
+        'angular-loading-bar'
     ]);
 });

@@ -1,0 +1,29 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "open weathe map application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarathsnair/weather-FE.git"
+  },
+  "author": "sarath s nair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarathsnair/weather-FE/issues"
+  },
+  "homepage": "https://github.com/sarathsnair/weather-FE#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "ejs": "^2.5.1",
+    "error-handler": "^1.0.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6"
+  }
+}

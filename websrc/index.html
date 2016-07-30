@@ -17,9 +17,9 @@
             </div>
             <div class="col-md-5 search-input">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="{{weather.searchPlaceHolder}}" ng-model="weather.searchTerm">
+                    <input type="text" class="form-control" placeholder="{{weather.searchPlaceHolder}}" ng-model="weather.location">
                     <span class="input-group-btn">
-                        <button class="btn btn-success" type="button">Search</button>
+                        <button class="btn btn-success" type="button" ng-click="weather.getForecastByLocation(weather.location)">Search</button>
                     </span>
                 </div>
                 <!-- /input-group -->

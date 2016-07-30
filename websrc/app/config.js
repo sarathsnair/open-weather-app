@@ -7,7 +7,8 @@ requirejs.config({
         domReady: 'lib/domReady/domReady',
         typeahead: 'lib/typeahead.js/dist/typeahead.jquery',
         angularResource: 'lib/angular-resource/angular-resource',
-        angularBootstrap: 'lib/angular-bootstrap/ui-bootstrap-tpls'
+        angularBootstrap: 'lib/angular-bootstrap/ui-bootstrap-tpls',
+        angularLoadingBar:'lib/angular-loading-bar/build/loading-bar'
     },
     shim: {
         angular: {
@@ -24,6 +25,9 @@ requirejs.config({
             deps:['angular']
         },
         angularBootstrap:{
+            deps:['angular']
+        },
+        angularLoadingBar:{
             deps:['angular']
         }
     },
