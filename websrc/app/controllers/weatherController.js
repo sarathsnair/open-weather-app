@@ -3,26 +3,25 @@ define([],
         var weatherController = function ($scope, weatherService) {
             this.pageTitle = "open Weather Application";
             this.searchPlaceHolder = "Enter a city name..";
-            this.location = "";
+            this.location = "cochin";
+            this.forecast;
             this.getForecastByLocation = function (location) {
-                //console.log(location);
-                if (location == '' || location == undefined) {
+                if (location === '' || location === undefined) {
                     return;
                 }
-                // weatherService.query("kochi");
-                /*var apiKey = '9519611ad4c0e54e0e460a4b9ae2b2ca';
-                $http.get("http://api.openweathermap.org/data/2.5/weather?appid="+apiKey+"&q="+location)
-                    .then(function (response) {
-                        $scope.data = response.data;
-                    });*/
 
-                weatherService.getForecastByLocation({ q: location }, function (data) {
-                    console.log(data);
-                },
-                    function (errorPayload) {
-                        console.log(errorPayload);
-                    }
-                );
+                this.forecast = weatherService.getForecastDaily({ location: location });
+                console.log(this.forecast);
+            };
+            //this.getForecastByLocation(this.location);
+
+            this.parseDate = function (unixTimestamp) {
+                return new Date(unixTimestamp * 1000);
+            };
+
+            this.getIconImgUrl = function (iconName) {
+                console.log(iconName);
+                return (iconName ? 'http://openweathermap.org/img/w/' + iconName + '.png' : '');
             };
         };
         weatherController.$inject = ["$scope", "weatherService"];
