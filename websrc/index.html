@@ -12,26 +12,25 @@
 
 <body>
     <div ng-controller="weatherController as weather" class="container-fluid">
-        <div class="navbar">
-            <div class="col-md-4">
-                <h3>{{weather.pageTitle}}</h3>
+        <div class="navbar navbar-inverse">
+            <div class="col-md-4 title-div">
+                <h1 class="page-title">Open Weather App</h1>
             </div>
             <div class="col-md-5 search-input">
                 <div class="input-group">
-                    <input type="text" class="search-input-text form-control" placeholder="{{weather.searchPlaceHolder}}" ng-model="weather.location">
+                    <input type="text" class="search-input-text form-control" placeholder="Enter a city name.." ng-model="weather.location">
                     <span class="input-group-btn">
-                        <button class="btn btn-success search-btn" type="button" ng-click="weather.getForecastByLocation(weather.location)">Search</button>
+                        <button class="btn btn-primary search-btn" type="button" ng-click="weather.getForecastByLocation(weather.location)">Search</button>
                     </span>
                 </div>
             </div>
-        </div>
-        <hr class="horizontal-line-separator">
-        <div class="weather-data" ng-show="weather.forecast">
+        </div>  
+        <div class="weather-data" ng-show="weather.forecast" ng-cloak>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>{{weather.forecast.city.name}},
-                        {{weather.forecast.city.country | isoCountry | uppercase}}
-                    </h2>
+                    <h3>{{weather.forecast.city.name}}
+                        <small>{{weather.forecast.city.country | isoCountry | uppercase}}</small>
+                    </h3>
                 </div>
             </div>
             <div class="row">
