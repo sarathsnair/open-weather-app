@@ -6,7 +6,8 @@ define('app', [
     'services/index',
     'directives/index',
     'utility/index',
-    'angularLoadingBar'
+    'angularLoadingBar',
+    'isoCountryCode'
 ], function (angular) {
     return angular.module('weather-app', [
         'ngResource',
@@ -14,6 +15,7 @@ define('app', [
         'controllers',
         'directives',
         'services',
-        'angular-loading-bar'
+        'angular-loading-bar',
+        'iso-3166-country-codes'
     ]);
 });
