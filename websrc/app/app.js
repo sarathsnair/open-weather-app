@@ -9,7 +9,7 @@ define('app', [
     'angularLoadingBar',
     'isoCountryCode'
 ], function (angular) {
-    return angular.module('weather-app', [
+    var ang_mod =  angular.module('weather-app', [
         'ngResource',
         'ui.bootstrap',
         'controllers',
@@ -18,4 +18,8 @@ define('app', [
         'angular-loading-bar',
         'iso-3166-country-codes'
     ]);
+    ang_mod.config(['cfpLoadingBarProvider',function(cfpLoadingBarProvider){
+        cfpLoadingBarProvider.includeSpinner = false;
+    }]);
+    return ang_mod;   
 });
