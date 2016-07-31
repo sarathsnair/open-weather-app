@@ -17,16 +17,71 @@
             </div>
             <div class="col-md-5 search-input">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="{{weather.searchPlaceHolder}}" ng-model="weather.location">
+                    <input type="text" class="search-input-text form-control" placeholder="{{weather.searchPlaceHolder}}" ng-model="weather.location">
                     <span class="input-group-btn">
-                        <button class="btn btn-success" type="button" ng-click="weather.getForecastByLocation(weather.location)">Search</button>
+                        <button class="btn btn-success search-btn" type="button" ng-click="weather.getForecastByLocation(weather.location)">Search</button>
                     </span>
                 </div>
-                <!-- /input-group -->
             </div>
         </div>
-        <hr>
-        <h4>{{weather.searchTerm}}</h4>
+        <hr class="horizontal-line-separator">
+        <div class="weather-data" ng-show="true">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2>{{weather.location}}
+                        <small>india</small>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            Panel content
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            Panel content
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            Panel content
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel title</h3>
+                        </div>
+                        <div class="panel-body">
+                            Panel content
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <footer>
         </footer>
     </div>
