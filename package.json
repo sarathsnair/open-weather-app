@@ -1,7 +1,7 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "description": "open weathe map application",
+  "description": "open weather map application",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sarathsnair/weather-FE.git"
+    "url": "git+https://github.com/sarathsnair/open-weather-app.git"
   },
   "author": "sarath s nair",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sarathsnair/weather-FE/issues"
+    "url": "https://github.com/sarathsnair/open-weather-app/issues"
   },
-  "homepage": "https://github.com/sarathsnair/weather-FE#readme",
+  "homepage": "https://github.com/sarathsnair/open-weather-app#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "bower": "^1.7.9",
@@ -25,5 +25,11 @@
     "errorhandler": "^1.4.3",
     "express": "^4.14.0",
     "method-override": "^2.3.6"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0"
   }
 }
