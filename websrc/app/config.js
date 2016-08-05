@@ -9,7 +9,8 @@ requirejs.config({
         angularResource: 'lib/angular-resource/angular-resource',
         angularBootstrap: 'lib/angular-bootstrap/ui-bootstrap-tpls',
         angularLoadingBar:'lib/angular-loading-bar/build/loading-bar',
-        isoCountryCode:'lib/iso-3166-country-codes-angular/dist/iso-3166-country-codes-angular.min'
+        isoCountryCode:'lib/iso-3166-country-codes-angular/dist/iso-3166-country-codes-angular.min',
+        angularUIRouter:'lib/angular-ui-router/release/angular-ui-router'
     },
     shim: {
         angular: {
@@ -32,6 +33,9 @@ requirejs.config({
             deps:['angular']
         },
         isoCountryCode:{
+            deps:['angular']
+        },
+        angularUIRouter:{
             deps:['angular']
         }
     },

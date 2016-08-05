@@ -1,0 +1,107 @@
+<div class="weather-data" ng-show="weather.forecast" ng-cloak>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3>{{weather.forecast.city.name}}
+                        <small>{{weather.forecast.city.country | isoCountry | uppercase}}</small>
+                    </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{weather.parseDate(weather.forecast.list[0].dt) | date:'fullDate'}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src={{weather.getIconImgUrl(weather.forecast.list[0].weather[0].icon)}} alt=""> {{weather.forecast.list[0].temp.day | number:1}}&deg;C {{weather.forecast.list[0].weather[0].main}}
+                        </p>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn-static">{{weather.forecast.list[0].weather[0].description}}</button>
+                            <button type="button" class="btn-static">Min Temp: {{weather.forecast.list[0].temp.min | number:1}}&deg;C</button>
+                            <button type="button" class="btn-static">Max Temp: {{weather.forecast.list[0].temp.max | number:1}}&deg;C</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <small>Day: {{weather.forecast.list[0].temp.day | number:1}}&deg;C | Night: {{weather.forecast.list[0].temp.night | number:1}}&deg;C | Pressure: {{weather.forecast.list[0].pressure}}hPa | Humidity: {{weather.forecast.list[0].humidity}}%</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{weather.parseDate(weather.forecast.list[1].dt) | date:'fullDate'}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src={{weather.getIconImgUrl(weather.forecast.list[1].weather[0].icon)}} alt=""> {{weather.forecast.list[1].temp.day | number:1}}&deg;C {{weather.forecast.list[1].weather[0].main}}
+                        </p>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn-static">{{weather.forecast.list[1].weather[0].description}}</button>
+                            <button type="button" class="btn-static">Min Temp: {{weather.forecast.list[1].temp.min | number:1}}&deg;C</button>
+                            <button type="button" class="btn-static">Max Temp: {{weather.forecast.list[1].temp.max | number:1}}&deg;C</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <small>Day: {{weather.forecast.list[1].temp.day | number:1}}&deg;C | Night: {{weather.forecast.list[1].temp.night | number:1}}&deg;C | Pressure: {{weather.forecast.list[1].pressure}}hPa | Humidity: {{weather.forecast.list[1].humidity}}%</small>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{weather.parseDate(weather.forecast.list[2].dt) | date:'fullDate'}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src={{weather.getIconImgUrl(weather.forecast.list[2].weather[0].icon)}} alt=""> {{weather.forecast.list[2].temp.day | number:1}}&deg;C {{weather.forecast.list[2].weather[0].main}}
+                        </p>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn-static">{{weather.forecast.list[2].weather[0].description}}</button>
+                            <button type="button" class="btn-static">Min Temp: {{weather.forecast.list[2].temp.min | number:1}}&deg;C</button>
+                            <button type="button" class="btn-static">Max Temp: {{weather.forecast.list[2].temp.max | number:1}}&deg;C</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <small>Day: {{weather.forecast.list[2].temp.day | number:1}}&deg;C | Night: {{weather.forecast.list[2].temp.night | number:1}}&deg;C | Pressure: {{weather.forecast.list[2].pressure}}hPa | Humidity: {{weather.forecast.list[2].humidity}}%</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{weather.parseDate(weather.forecast.list[3].dt) | date:'fullDate'}}</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src={{weather.getIconImgUrl(weather.forecast.list[3].weather[0].icon)}} alt=""> {{weather.forecast.list[3].temp.day | number:1}}&deg;C {{weather.forecast.list[3].weather[0].main}}
+                        </p>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn-static">{{weather.forecast.list[3].weather[0].description}}</button>
+                            <button type="button" class="btn-static">Min Temp: {{weather.forecast.list[3].temp.min | number:1}}&deg;C</button>
+                            <button type="button" class="btn-static">Max Temp: {{weather.forecast.list[3].temp.max | number:1}}&deg;C</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <small>Day: {{weather.forecast.list[3].temp.day | number:1}}&deg;C | Night: {{weather.forecast.list[3].temp.night | number:1}}&deg;C | Pressure: {{weather.forecast.list[3].pressure}}hPa | Humidity: {{weather.forecast.list[3].humidity}}%</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+</footer>
